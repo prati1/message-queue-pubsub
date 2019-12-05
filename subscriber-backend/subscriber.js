@@ -10,7 +10,7 @@ exports.receiveMessageFromQueue = socket =>
       channel.assertExchange(exchangeName, `fanout`, {
         durable: false,
       });
-
+      console.log(`here`);
       channel
         .assertQueue(``, {
           exclusive: true,
@@ -22,6 +22,7 @@ exports.receiveMessageFromQueue = socket =>
             msg => {
               if (msg.content) {
                 const cont = JSON.parse(msg.content.toString());
+                console.log(cont);
                 if (cont.priority >= 7) {
                   // Emit the messages on 'randomMessage' to display on frontend
                   socket.emit(`randomMessage`, cont);

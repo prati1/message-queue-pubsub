@@ -1,0 +1,27 @@
+{
+  "name": "node-message-queue-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "Pratiksha Shrestha",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "node-cron": "^2.0.3",
+    "nodemon": "^2.0.1",
+    "random-sentence": "^1.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-prettier": "^2.7.0",
+    "prettier": "^1.18.2",
+    "babel-eslint": "^10.0.2"
+  }
+}
