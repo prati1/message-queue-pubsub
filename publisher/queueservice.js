@@ -11,8 +11,8 @@ exports.sendMessageToQueue = () => {
       .then(connection => connection.createChannel())
       .then(channel => {
         const exchangeName = `RandomMessages`;
-        channel.assertExchange(exchangeName, `fanout`, {
-          durable: false,
+        channel.assertQueue(exchangeName, {
+          durable: true,
         });
         let sentence = ``;
         let message = {};
@@ -27,9 +27,8 @@ exports.sendMessageToQueue = () => {
             priority: Math.ceil(Math.random() * 10),
           };
           console.log(message);
-          channel.publish(
+          channel.sendToQueue(
             exchangeName,
-            ``,
             Buffer.from(JSON.stringify(message))
           );
         }
