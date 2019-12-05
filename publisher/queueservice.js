@@ -23,7 +23,7 @@ exports.sendMessageToQueue = () => {
           sentence = randomSentence({ min: 5, max: 10 });
           message = {
             message: sentence,
-            timestamp: Date.now(),
+            timestamp: new Date().toJSON(),
             priority: Math.ceil(Math.random() * 10),
           };
           console.log(message);
