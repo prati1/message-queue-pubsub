@@ -1,6 +1,6 @@
 $(document).ready(() => {
   // let href = location.href;
-  let socket = io.connect(`http://localhost:3008`);
+  let socket = io.connect(`http://localhost:8018`);
   // get message from subscriber and display
   socket.on("randomMessage", data => {
     let newMessage = $(`.messageList`)

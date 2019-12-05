@@ -13,7 +13,7 @@ app.set(`view engine`, `pug`);
 
 const server = require(`http`).createServer(app);
 const io = require(`socket.io`)(server);
-server.listen(3010);
+server.listen(3018);
 
 // Configure bodyparser to handle post requests
 app.use(
