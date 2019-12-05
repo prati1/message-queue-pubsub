@@ -1,0 +1,19 @@
+/* Chat containers */
+.message-cont {
+  border: 3px solid #dddddd;
+  background-color: #eeeeee;
+  border-radius: 12px;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.badge {
+  float: right;
+}

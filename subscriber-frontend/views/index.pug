@@ -1,9 +1,12 @@
 extends layout
 
 block content
-  .container
+  .container#mainContainer
     h3.text-center #{title}
-    ul.list-group
-      .messageList.list-group-item #{message}
+    div(style="display:none")
+      .container.message-cont
+        span.badge  #{priority}
+        p #{message}
+        span.time-right #{timestamp}
   append scripts
     script(src='/javascripts/workerservice.js')
